@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const url = 'mongodb://localhost/student'
 
 const app = express()
+app.use(express.json())
 
 mongoose.connect(url, {useNewUrlParser:true})
 const con = mongoose.connection
